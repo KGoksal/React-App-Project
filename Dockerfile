@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # Set working directory
-WORKDIR /create-react-app
+WORKDIR /create-react-app 
 
 # Copy package.json and package-lock.json
 COPY public/ /create-react-app/public

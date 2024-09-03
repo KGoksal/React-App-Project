@@ -16,4 +16,4 @@ spec:
       - name: my-api
         image: agoksal19/reactapp
         ports:
-        - containerPort: 3000
+        - containerPort: 3000 

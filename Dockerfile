@@ -6,7 +6,7 @@ WORKDIR /create-react-app
 
 # Copy package.json and package-lock.json
 COPY public/ /create-react-app/public
-COPY src/ /create-react-app/src
+COPY src/ /create-react-app/src 
 COPY package.json /create-react-app/
 
 # Install  dependencies 

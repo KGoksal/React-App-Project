@@ -29,7 +29,7 @@ This repository creates the following infrastructure on AWS:
 3. **Amazon ECR (Elastic Container Registry)**: Stores the Docker images for the React.js app.
 4. **GitLab CI/CD Server**: Set up on an EC2 instance, used for managing version control and pipelines for deployment.
 
-## Terraform Files
+## Terraform Files 
 
 ### AWS ECS Fargate Deployment (`main.tf`)
 

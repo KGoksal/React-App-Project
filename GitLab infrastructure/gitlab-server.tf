@@ -2,7 +2,7 @@
 //GitLab Server is enabled with Git, Docker and Docker Compose,
 //AWS CLI Version 2, Python 3, Ansible, Terraform and Boto3.
 //GitLab Server will run on Amazon Linux 2023 EC2 Instance with
-//custom security group allowing HTTP(80, 8080) and SSH (22) connections from anywhere.
+//custom security group allowing HTTP(80, 8080) and SSH (22) connections from anywhere. 
 
 provider "aws" {
   region = var.region

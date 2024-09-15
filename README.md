@@ -13,7 +13,7 @@ This repository contains Terraform configurations to deploy a React.js applicati
 - [Contributing](#contributing)
 - [License](#license)
 
-## Requirements
+## Requirements 
 
 - AWS account with programmatic access
 - Terraform installed

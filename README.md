@@ -1,6 +1,6 @@
 
 # React.js App Deployment on AWS ECS Fargate & GitLab CI/CD  
-
+ 
 This repository contains Terraform configurations to deploy a React.js application on AWS ECS Fargate. It also includes Terraform scripts for setting up a GitLab server on an EC2 instance for CI/CD workflows.
 
 ## Table of Contents

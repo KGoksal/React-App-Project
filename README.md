@@ -119,7 +119,7 @@ CMD ["npm", "start"]
 
 This Docker file sets up a React.js app, installs the dependencies, and runs the application. You can build the Docker image and push it to an AWS ECR repository for deployment.
 
-## GitLab Server Deployment
+## GitLab Server Deployment 
 
 The following Terraform script creates a GitLab server running on an AWS EC2 instance. The server is configured with the following:
 - Docker and Docker Compose

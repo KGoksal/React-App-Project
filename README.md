@@ -210,14 +210,14 @@ output "GitLabURL" {
 ### Usage:
 
 1. **Build the Docker Image:**
-   ```bash
+   ```
    docker build -t my-react-app .
    docker tag my-react-app:latest <ECR_REPOSITORY_URL>:latest
    docker push <ECR_REPOSITORY_URL>:latest
    ```
 
-2. **Deploy with Terraform:**
-   ```bash
+2. **Deploy with Terraform:** 
+   ```
    terraform init
    terraform apply
    ```

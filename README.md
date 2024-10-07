@@ -6,7 +6,7 @@ This repository contains Terraform configurations to deploy a React.js applicati
 ## Table of Contents
 - [Requirements](#requirements)
 - [Infrastructure Overview](#infrastructure-overview)
-- [Terraform Files](#terraform-files)
+- [Terraform Files](#terraform-files) 
 - [Docker File](#docker-file)
 - [GitLab Server Deployment](#gitlab-server-deployment)
 - [Usage](#usage)

@@ -178,7 +178,7 @@ resource "aws_security_group" "tf-GitLab-sec" {
   }
 }
 
-resource "aws_iam_role" "tf-GitLab-server-role" {
+resource "aws_iam_role" "tf-GitLab-server-role" { 
   name = var.GitLab-role
   assume_role_policy = <<EOF
 {

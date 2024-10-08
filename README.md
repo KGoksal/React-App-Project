@@ -208,7 +208,7 @@ output "GitLabURL" {
 ```
 
 ### Usage:
-
+ 
 1. **Build the Docker Image:**
    ```
    docker build -t my-react-app .

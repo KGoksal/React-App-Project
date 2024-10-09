@@ -1,231 +1,132 @@
+import { Badge } from "@/components/ui/badge"
+import { Card } from "@/components/ui/card"
+import { Github, Linkedin, Mail } from "lucide-react"
 
-# React.js App Deployment on AWS ECS Fargate & GitLab CI/CD     
- 
-This repository contains Terraform configurations to deploy a React.js application on AWS ECS Fargate. It also includes Terraform scripts for setting up a GitLab server on an EC2 instance for CI/CD workflows.
+export default function Component() {
+  return (
+    <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold mb-4">Kadir Goksal</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-400">DevOps Engineer</p>
+      </div>
 
-## Table of Contents
-- [Requirements](#requirements)
-- [Infrastructure Overview](#infrastructure-overview)
-- [Terraform Files](#terraform-files) 
-- [Docker File](#docker-file)
-- [GitLab Server Deployment](#gitlab-server-deployment)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">👨‍💻 About Me</h2>
+        <p className="mb-4">
+          With over 2 years of IT experience, including more than 1 year in DevOps, I'm passionate about automating IT operations and staying updated with emerging technologies. My expertise includes:
+        </p>
+        <ul className="list-disc list-inside mb-4">
+          <li>Implementing and managing CI/CD pipelines (Jenkins)</li>
+          <li>Containerization and orchestration</li>
+          <li>Monitoring and automating production infrastructure</li>
+          <li>Building tools to minimize errors</li>
+          <li>Conducting root cause analysis</li>
+          <li>Enhancing customer experience</li>
+        </ul>
+        <p>
+          Currently, I'm working as a DevOps Engineer at Nimbous, where I contribute to optimizing cloud infrastructure and automating workflows.
+        </p>
+      </section>
 
-## Requirements 
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">🏆 Certifications</h2>
+        <ul className="list-disc list-inside">
+          <li>HashiCorp Terraform Associate</li>
+          <li>Azure Fundamentals</li>
+          <li>Certified Kubernetes Administrator (CKA)</li>
+        </ul>
+      </section>
 
-- AWS account with programmatic access
-- Terraform installed
-- Docker installed locally for building the React.js app image
-- Node.js 18.x (used in the Docker container)
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">🛠 Skills & Technologies</h2>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Languages</h3>
+            <p>Python, JavaScript, TypeScript, Bash, HTML, CSS</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-2">DevOps</h3>
+            <p>Jenkins, Docker, Kubernetes, Ansible, Terraform, Maven</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Cloud</h3>
+            <p>AWS (EC2, ECS, ECR, DynamoDB, S3, RDS, ALB, VPC, EKS), Azure (VM, Load Balancer, AKS, SQL)</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Monitoring</h3>
+            <p>Grafana, Prometheus</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Databases</h3>
+            <p>SQL (PostgreSQL, MySQL), NoSQL (MongoDB, DynamoDB)</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Other</h3>
+            <p>Jira, Git, Linux</p>
+          </div>
+        </div>
+      </section>
 
-## Infrastructure Overview
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">🌟 Professional Highlights</h2>
+        <ul className="list-disc list-inside">
+          <li>Proficient in infrastructure as code using Terraform</li>
+          <li>Experience with Jira for agile project management</li>
+          <li>Strong communication, adaptability, and teamwork skills</li>
+          <li>Focus on innovative solutions and rigorous testing practices</li>
+          <li>Background in using automation tools for software updates across cloud platforms (AWS, Azure)</li>
+          <li>Expertise in optimizing cloud resources and managing costs</li>
+        </ul>
+      </section>
 
-This repository creates the following infrastructure on AWS:
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">📊 GitHub Stats</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card className="p-4">
+            <h3 className="text-lg font-semibold mb-2">GitHub Activity</h3>
+            <img src="https://github-readme-stats.vercel.app/api?username=KGoksal&show_icons=true&theme=radical" alt="KGoksal's GitHub Stats" className="w-full" />
+          </Card>
+          <Card className="p-4">
+            <h3 className="text-lg font-semibold mb-2">Streak Stats</h3>
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=KGoksal&theme=radical" alt="KGoksal's GitHub Streak" className="w-full" />
+          </Card>
+        </div>
+      </section>
 
-1. **Amazon ECS (Elastic Container Service) Fargate**: Hosts the React.js application in a serverless environment.
-2. **Elastic Load Balancer (ALB)**: Distributes incoming traffic to the ECS tasks.
-3. **Amazon ECR (Elastic Container Registry)**: Stores the Docker images for the React.js app.
-4. **GitLab CI/CD Server**: Set up on an EC2 instance, used for managing version control and pipelines for deployment.
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">🔧 Technologies & Tools</h2>
+        <div className="flex flex-wrap gap-2">
+          <Badge variant="secondary">Linux</Badge>
+          <Badge variant="secondary">VSCode</Badge>
+          <Badge variant="secondary">Python</Badge>
+          <Badge variant="secondary">JavaScript</Badge>
+          <Badge variant="secondary">Bash</Badge>
+          <Badge variant="secondary">Docker</Badge>
+          <Badge variant="secondary">Kubernetes</Badge>
+          <Badge variant="secondary">Terraform</Badge>
+          <Badge variant="secondary">AWS</Badge>
+          <Badge variant="secondary">Azure</Badge>
+        </div>
+      </section>
 
-## Terraform Files 
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">📫 Get in Touch</h2>
+        <div className="flex justify-center space-x-4">
+          <a href="https://www.linkedin.com/in/kgoksal/" className="text-blue-500 hover:text-blue-600">
+            <Linkedin className="w-8 h-8" />
+          </a>
+          <a href="https://github.com/KGoksal" className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100">
+            <Github className="w-8 h-8" />
+          </a>
+          <a href="mailto:abdulkadirgoksal@gmail.com" className="text-red-500 hover:text-red-600">
+            <Mail className="w-8 h-8" />
+          </a>
+        </div>
+      </section>
 
-### AWS ECS Fargate Deployment (`main.tf`)
-
-This Terraform script provisions the following:
-- A new VPC, subnet, and internet gateway for networking.
-- An ECS cluster that hosts a React.js app on Fargate.
-- A load balancer (ALB) to handle external traffic.
-- IAM roles for ECS task execution.
-- A security group that allows HTTP traffic.
-
-```hcl
-provider "aws" {
-  region = "us-east-1"  # Change to your preferred region
+      <div className="text-center mt-8">
+        <img src="https://user-images.githubusercontent.com/74038190/212741999-016fddbd-617a-4448-8042-0ecf907aea25.gif" alt="DevOps Animation" className="w-full max-w-2xl mx-auto" />
+      </div>
+    </div>
+  )
 }
-
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
-}
-
-resource "aws_subnet" "main" {
-  vpc_id = aws_vpc.main.id
-  cidr_block = "10.0.1.0/24"
-  availability_zone = "us-east-1a"
-}
-
-resource "aws_internet_gateway" "main" {
-  vpc_id = aws_vpc.main.id
-}
-
-resource "aws_ecs_cluster" "ecs_cluster" {
-  name = "my-cluster"
-}
-
-resource "aws_ecs_task_definition" "ecs_task" {
-  family                   = "my-react-app-task"
-  network_mode             = "awsvpc"
-  requires_compatibilities = ["FARGATE"]
-  cpu                      = 256
-  memory                   = 512
-  execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
-  task_role_arn            = aws_iam_role.ecs_task_execution_role.arn
-  container_definitions    = jsonencode([{
-    name      = "my-react-app"
-    image     = "<ECR_REPOSITORY_URL>:latest"
-    essential = true
-    portMappings = [{
-      containerPort = 80
-      hostPort      = 80
-    }]
-  }])
-}
-
-# Additional resources include ALB, security groups, IAM roles, etc.
-```
-
-### Key Components
-- **VPC & Subnets**: For networking.
-- **ECS Cluster**: Manages containerized apps.
-- **IAM Roles**: Provides the required permissions to the ECS tasks.
-- **ALB & Target Group**: Ensures that the traffic is routed to the running containers.
-
-## Docker File
-
-The `Dockerfile` used for the React.js application is as follows:
-
-```dockerfile
-# Use Node.js base image
-FROM node:18-alpine
-
-# Set working directory
-WORKDIR /create-react-app  
-
-# Copy the required files
-COPY public/ /create-react-app/public
-COPY src/ /create-react-app/src 
-COPY package.json /create-react-app/
-
-# Install dependencies
-RUN npm install 
-
-# Copy the rest of the application
-COPY . .
-
-# Command to run the application
-CMD ["npm", "start"]
-```
-
-This Docker file sets up a React.js app, installs the dependencies, and runs the application. You can build the Docker image and push it to an AWS ECR repository for deployment.
-
-## GitLab Server Deployment 
-
-The following Terraform script creates a GitLab server running on an AWS EC2 instance. The server is configured with the following:
-- Docker and Docker Compose
-- Git
-- AWS CLI
-- Python 3, Ansible, Terraform, and Boto3
-
-### GitLab Terraform Script (`gitlab.tf`)
-
-```hcl
-provider "aws" {
-  region = var.region
-}
-
-resource "aws_instance" "tf-GitLab-server" {
-  ami           = var.ami
-  instance_type = var.instance_type
-  key_name      = var.mykey
-  vpc_security_group_ids = [aws_security_group.tf-GitLab-sec.id]
-  iam_instance_profile = aws_iam_instance_profile.tf-GitLab-server-profile.name
-  root_block_device {
-    volume_size = 16
-  }
-  tags = {
-    Name = var.GitLab-server-tag
-    server = "GitLab"
-  }
-  user_data = file("user.sh")
-}
-
-resource "aws_security_group" "tf-GitLab-sec" {
-  name = var.GitLab_server_sec
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  ingress {
-    from_port   = 8080
-    to_port     = 8080
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = -1 
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
-resource "aws_iam_role" "tf-GitLab-server-role" { 
-  name = var.GitLab-role
-  assume_role_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow"
-    }
-  ]
-}
-EOF
-
-  managed_policy_arns = [
-    "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess", 
-    "arn:aws:iam::aws:policy/AWSCloudFormationFullAccess", 
-    "arn:aws:iam::aws:policy/AdministratorAccess"
-  ]
-}
-
-output "GitLabURL" {
-  value = "http://${aws_instance.tf-GitLab-server.public_dns}:8080"
-}
-```
-
-### Usage:
- 
-1. **Build the Docker Image:**
-   ```
-   docker build -t my-react-app .
-   docker tag my-react-app:latest <ECR_REPOSITORY_URL>:latest
-   docker push <ECR_REPOSITORY_URL>:latest
-   ```
-
-2. **Deploy with Terraform:** 
-   ```
-   terraform init
-   terraform apply
-   ```
-
-3. **Access the GitLab Server:**
-   - Visit the URL from the output of the `GitLabURL`.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-

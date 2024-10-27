@@ -5,8 +5,8 @@ FROM node:18-alpine
 WORKDIR /create-react-app  
 
 # Copy package.json and package-lock.json
-COPY public/ /create-react-app/public
-COPY src/ /create-react-app/src 
+COPY public/ /create-react-app/public 
+COPY src/ /create-react-app/src  
 COPY package.json /create-react-app/
 
 # Install  dependencies 

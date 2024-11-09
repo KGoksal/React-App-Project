@@ -1,8 +1,8 @@
 stages:
-  - build
-  - test
-  - deploy-aws
-  - deploy-k8s
+  - build 
+  - test 
+  - deploy-aws 
+  - deploy-k8s 
 
 build:
   stage: build
